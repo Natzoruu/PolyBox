@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
-import { Inter, Fira_Code } from "next/font/google";
+import {  Open_Sans } from "next/font/google";
+
 import "./globals.css";
 
-const InterSans = Inter({
-  variable: "--font-inter-sans",
-  subsets: ["latin"],
-});
-
-const FiracodeMono = Fira_Code({
-  variable: "--font-firacode-mono",
+const OpenSans = Open_Sans({
+  variable: "--font-Open_Sans",
   subsets: ["latin"],
 });
 
@@ -25,7 +21,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${InterSans.variable} ${FiracodeMono.variable} antialiased`}
+        className={`${OpenSans.variable} antialiased`}
       >
         {children}
       </body>
