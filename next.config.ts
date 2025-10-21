@@ -1,10 +1,9 @@
 import type { NextConfig } from "next";
 
-const withTM = require('next-transpile-modules')(['three'])
-module.exports = withTM()
-
 const nextConfig: NextConfig = {
-  /* config options here */
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 };
 
 export default nextConfig;

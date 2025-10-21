@@ -17,7 +17,6 @@ function Island(){
 }
 
 const Showcase = () => {
-  const controlsRef = useRef<any>(null)
 
   return (
     <div className='w-full flex justify-center items-center my-8'>
@@ -39,7 +38,6 @@ const Showcase = () => {
               <Island/>
             </Suspense>
             <OrbitControls
-              ref={controlsRef}
               enableZoom={true}
               enablePan={true}
               enableRotate={true}
