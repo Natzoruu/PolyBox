@@ -19,7 +19,11 @@ function Island(){
 const Showcase = () => {
 
   return (
-    <div className='w-full flex justify-center items-center my-8'>
+    <div className='w-full h-screen flex flex-col justify-center items-center gap-y-8'>
+      <div className='flex flex-col text-center gap-y-2'>
+        <h1 className='text-7xl font-bold text-white '>Create. Render. Inspire.</h1>
+        <p className='text-pretty text-gray-400 text-lg'>From concept to creation, every model is a bridge between imagination and experience.<br/>Build, render, and inspire the world around you.</p>
+      </div>
       <div className='grid grid-cols-2 w-7xl gap-4 border border-black rounded-4xl shadow-[0_0px_10px_rgba(255,255,255,0.5)]'>
         <div className='text-white flex flex-col p-8 justify-center gap-4'>
           <h1 className='font-bold text-3xl'>Turn Spaces into Experiences</h1>
