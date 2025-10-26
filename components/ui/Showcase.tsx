@@ -19,19 +19,19 @@ function Island(){
 const Showcase = () => {
 
   return (
-    <div className='w-full h-screen flex flex-col justify-center items-center gap-y-8'>
+    <div className='w-full h-screen flex flex-col justify-center items-center gap-y-8 px-4'>
       <div className='flex flex-col text-center gap-y-2'>
-        <h1 className='text-7xl font-bold text-white '>Create. Render. Inspire.</h1>
-        <p className='text-pretty text-gray-400 text-lg'>From concept to creation, every model is a bridge between imagination and experience.<br/>Build, render, and inspire the world around you.</p>
+        <h1 className='lg:text-7xl text-3xl font-bold text-white '>Create. Render. Inspire.</h1>
+        <p className='text-pretty text-gray-400 lg:text-lg text-base'>From concept to creation, every model is a bridge between imagination and experience.<br/>Build, render, and inspire the world around you.</p>
       </div>
-      <div className='grid grid-cols-2 w-7xl gap-4 border border-black rounded-4xl shadow-[0_0px_10px_rgba(255,255,255,0.5)]'>
+      <div className='grid lg:grid-cols-2 grid-cols-1 lg:w-7xl w-auto gap-4 border border-black rounded-4xl shadow-[0_0px_10px_rgba(255,255,255,0.5)]'>
         <div className='text-white flex flex-col p-8 justify-center gap-4'>
-          <h1 className='font-bold text-3xl'>Turn Spaces into Experiences</h1>
-          <span className='text-gray-400 text-pretty'>
+          <h1 className='font-bold lg:text-3xl text-2xl'>Turn Spaces into Experiences</h1>
+          <span className='text-gray-400 text-pretty text-base'>
             Imagine bringing your ideas to life with models like this one. From realistic interiors to immersive VR and AR environments, every detail is crafted to spark your creativity and make your projects truly unforgettable.
           </span>
         </div>
-        <div className='h-[600px]' id='canvas-container'>
+        <div className='lg:h-[600px] h-[450px]' id='canvas-container'>
           <Canvas 
             camera={{ position: [16.48, 14.87, -21.69], fov: 50 }} 
             className='bg-gradient-to-r from-blue-400/80 to-purple-400/80 border-0 rounded-4xl'

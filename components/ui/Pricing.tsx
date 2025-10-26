@@ -62,12 +62,12 @@ const Pricing = () => {
         },
     ]
   return (
-    <div className='h-screen flex flex-col justify-center items-center pt-10'>
+    <div className='lg:h-screen min-h-screen flex flex-col justify-center items-center lg:pt-10 p-6'>
         <div className='w-full flex flex-col justify-center items-center gap-4'>
-            <h1 className='text-white font-bold text-7xl'>Choose the Right Plan for Your 3D Journey</h1>
-            <p className='text-pretty text-gray-400 text-lg'>Whether you’re just exploring or building professional scenes, we’ve got a plan that fits your creative workflow.</p>
+            <h1 className='text-white font-bold lg:text-7xl text-3xl text-center'>Choose the Right Plan for Your 3D Journey</h1>
+            <p className='text-pretty text-gray-400 lg:text-lg text-base text-center'>Whether you’re just exploring or building professional scenes, we’ve got a plan that fits your creative workflow.</p>
         </div>
-            <div className='w-7xl grid grid-cols-3 gap-4 my-4'>
+            <div className='lg:w-7xl w-auto grid lg:grid-cols-3 grid-cols-1 gap-4 my-4'>
                 {CardFeatures.map((item, index) => (
                     <GlareHover 
                     key={index}

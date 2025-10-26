@@ -35,11 +35,11 @@ const Testimonial = () => {
       
     <div className='relative h-screen flex flex-col justify-center items-center overflow-hidden'>
        <BackgroundRippleEffect rows={32} cols={48}/>
-        <div className='relative flex w-full h-125 flex-col items-center justify-center overflow-hidden bg-gradient-to-b from-black/80 via-black/20 to-transparent'>
+        <div className='relative flex w-full h-auto flex-col items-center justify-center px-4 bg-gradient-to-b from-black/80 via-black/20 to-transparent'>
             <div className='w-full flex flex-col justify-center items-center my-4 gap-4 z-10'>
-                <h1 className='text-white text-7xl font-bold text-center'>Voices from the Creative World</h1>
-                <span className='text-gray-400 text-lg text-pretty my-2 text-center'>From architects to game developers, our community shares how these 3D models helped them unlock new possibilities and bring projects to life.</span>
-                <div className='w-7xl overflow-hidden'>
+                <h1 className='text-white lg:text-7xl text-3xl font-bold text-center'>Voices from the Creative World</h1>
+                <span className='text-gray-400 lg:text-lg text-base text-pretty my-2 text-center'>From architects to game developers, our community shares how these 3D models helped them unlock new possibilities and bring projects to life.</span>
+                <div className='w-7xl overflow-hidden'> 
                     <InfiniteMovingCards
                     direction="right"
                     speed="normal"

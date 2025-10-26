@@ -25,6 +25,12 @@ export const MaskContainer = ({
 
   const containerRef = useRef<HTMLDivElement | null>(null);
 
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+  
+  useEffect(() => {
+    setIsTouchDevice("ontouchstart" in window || navigator.maxTouchPoints > 0);
+  }, []);
+
   const updateMousePosition = (e: MouseEvent) => {
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
@@ -43,6 +49,10 @@ export const MaskContainer = ({
 
   const maskSize = isHovered ? revealSize : size;
 
+  const handleTap = () => {
+    if (isTouchDevice) setIsHovered((prev) => !prev);
+  };
+
   return (
     <motion.div
       ref={containerRef}
@@ -53,6 +63,7 @@ export const MaskContainer = ({
       transition={{
         backgroundColor: { duration: 0.3 },
       }}
+      onClick={handleTap}
     >
       <motion.div
         className="absolute flex h-full w-full items-center justify-center bg-black text-6xl mask-[url(/mask.svg)] mask-no-repeat mask-size-[40px] dark:bg-white"
