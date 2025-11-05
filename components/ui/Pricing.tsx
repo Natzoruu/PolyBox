@@ -1,6 +1,10 @@
+"use client"
 import React from 'react'
-import { X , Check, SignalZero , } from 'lucide-react'
+import { X , Check } from 'lucide-react'
 import  GlareHover  from "@/components/GlareHover"
+import  PixelBlast  from "@/components/PixelBlast"
+import { toast } from "sonner"
+
 
 
 const Pricing = () => {
@@ -62,50 +66,74 @@ const Pricing = () => {
         },
     ]
   return (
-    <div className='lg:h-screen min-h-screen flex flex-col justify-center items-center lg:pt-10 p-6'>
-        <div className='w-full flex flex-col justify-center items-center gap-4'>
-            <h1 className='text-white font-bold lg:text-7xl text-3xl text-center'>Choose the Right Plan for Your 3D Journey</h1>
-            <p className='text-pretty text-gray-400 lg:text-lg text-base text-center'>Whether you’re just exploring or building professional scenes, we’ve got a plan that fits your creative workflow.</p>
+    <div className="relative w-full h-auto min-h-screen overflow-hidden">
+        <div className="absolute inset-0 z-0">
+            <PixelBlast
+            className=''
+            variant="circle"
+            pixelSize={10}
+            color="#9810fa"
+            patternScale={2}
+            patternDensity={0.8}
+            pixelSizeJitter={0.5}
+            enableRipples
+            rippleSpeed={0.4}
+            rippleThickness={0.12}
+            rippleIntensityScale={1.5}
+            liquid
+            liquidStrength={0.12}
+            liquidRadius={1.2}
+            liquidWobbleSpeed={5}
+            speed={0.6}
+            edgeFade={0.1}
+            transparent={true}
+            />
         </div>
-            <div className='lg:w-7xl w-auto grid lg:grid-cols-3 grid-cols-1 gap-4 my-4'>
-                {CardFeatures.map((item, index) => (
-                    <GlareHover 
-                    key={index}
-                    className=''
-                    glareColor="#ffffff"
-                    glareOpacity={0.3}
-                    glareAngle={-30}
-                    glareSize={300}
-                    transitionDuration={800}
-                    playOnce={false}>
-                        <div className='flex flex-col justify-between h-full items-start p-6 gap-1 text-white' >
-                            <h1 className='font-bold text-xl'>{item.title}</h1>
-                            <p className='text-gray-400 text-lg text-pretty'>{item.desc}</p>
-                            <p className='font-bold text-xl italic'>{item.sub}$<span className='text-gray-400 text-lg text-pretty'>/month</span></p>
-                            <p className='font-bold text-xl'>Great for:</p>
-                            <p className='text-gray-400 text-lg text-pretty'>{item.greatFor}</p>
-                            <div className='flex w-full justify-center items-center my-4'>
-                                <button className="p-[3px] relative cursor-pointer">
-                                    <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
-                                    <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
-                                        Lit up borders
-                                    </div>
-                                </button>
+        <div className='2xl:h-screen h-auto relative z-10 flex flex-col justify-center items-center lg:pt-10 p-6 top-10 -translate-x-1/2 left-1/2'>
+            <div className='w-full flex flex-col justify-center items-center gap-4 px-4'>
+                <h1 className='text-white font-bold lg:text-7xl text-3xl text-center'>Choose the Right Plan for Your 3D Journey</h1>
+                <p className='text-pretty text-gray-400 lg:text-lg text-base text-center'>Whether you’re just exploring or building professional scenes, we’ve got a plan that fits your creative workflow.</p>
+            </div>
+                <div className='lg:w-7xl w-auto grid lg:grid-cols-3 grid-cols-1 gap-4 my-4 sm:px-20 md:px-40 lg:px-45 xl:px-25 2xl:px-5'>
+                    {CardFeatures.map((item, index) => (
+                        <GlareHover
+                        key={index}
+                        className='my-4'
+                        glareColor="#ffffff"
+                        glareOpacity={0.3}
+                        glareAngle={-30}
+                        glareSize={300}
+                        transitionDuration={800}
+                        playOnce={false}>
+                            <div className='flex flex-col justify-between h-full items-start p-6 gap-1 text-white' >
+                                <h1 className='font-bold text-xl'>{item.title}</h1>
+                                <p className='text-gray-400 text-lg text-pretty'>{item.desc}</p>
+                                <p className='font-bold text-xl italic'>{item.sub}$<span className='text-gray-400 text-lg text-pretty'>/month</span></p>
+                                <p className='font-bold text-xl'>Great for:</p>
+                                <p className='text-gray-400 text-lg text-pretty'>{item.greatFor}</p>
+                                <div className='flex w-full justify-center items-center my-4'>
+                                    <button className="p-[3px] relative cursor-pointer" onClick={()=> toast.info("Registrations are currently closed. We’ll be reopening soon — stay tuned!")}>
+                                        <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
+                                        <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
+                                            Subscribe
+                                        </div>
+                                    </button>
+                                </div>
+                                <h2 className='font-bold text-xl'>Features</h2>
+                                {item.features.map((item, index)=>(
+                                    <p className='flex gap-x-4 items-start justify-start w-full' key={index}>
+                                    {item.available ?
+                                        <Check className="self-center" color='green' size={20}/> :
+                                        <X className="self-center" color='red' size={20} />
+                                    }
+                                    {item.desc}
+                                    </p>
+                                ))}
                             </div>
-                            <h2 className='font-bold text-xl'>Features</h2>
-                            {item.features.map((item, index)=>(
-                                <p className='flex gap-x-4 items-start justify-start w-full' key={index}>
-                                {item.available ?
-                                    <Check className="self-center" color='green' size={20}/> :
-                                    <X className="self-center" color='red' size={20} />
-                                }
-                                {item.desc}
-                                </p>
-                            ))}
-                        </div>
-                            </GlareHover>
-                    ))}
-                </div>
+                                </GlareHover>
+                        ))}
+                    </div>
+        </div>
     </div>
   )
 }

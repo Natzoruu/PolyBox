@@ -3,19 +3,19 @@ import {Heart} from 'lucide-react'
 
 const Footer = () => {
     const QuickNavMenu = [
-        {menu : "Hero", url : "#"},
-        {menu : "Perkcards", url : "#"},
-        {menu : "Categories", url : "#"},
-        {menu : "Showcase", url : "#"},
-        {menu : "Testimonial", url : "#"},
-        {menu : "Cta", url : "#"},
-        {menu : "Pricing", url : "#"},
+        {menu : "Home", url : "#Home"},
+        {menu : "Perks", url : "#Perkcards"},
+        {menu : "Categories", url : "#Categories"},
+        {menu : "Showcase", url : "#Showcase"},
+        {menu : "Testimonial", url : "#Testimonial"},
+        {menu : "Cta", url : "#Cta"},
+        {menu : "Pricing", url : "#Pricing"},
     ]
     const FollowUs = [
-        {menu : "Instagram", url : "#"},
-        {menu : "X (Twitter)", url : "#"},
-        {menu : "YouTube", url : "#"},
-        {menu : "Discord", url : "#"},
+        {menu : "Instagram", url : "https://www.instagram.com"},
+        {menu : "X (Twitter)", url : "https://x.com"},
+        {menu : "YouTube", url : "www.youtube.com"},
+        {menu : "Discord", url : "https://discord.com"},
     ]
   return (
     <>

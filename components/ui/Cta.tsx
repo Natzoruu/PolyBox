@@ -11,10 +11,12 @@ const Cta = () => {
                 revealText = {<div className='flex flex-col'>
                     <p className='min-w-full text-center lg:text-4xl text-2xl lg:p-0 px-6 font-bold text-white'>Ready to bring your vision into the 3D world?</p>
                     <button className="p-[3px] cursor-pointer absolute left-1/2 -translate-x-1/2 bottom-1/3">
+                        <a href='#Pricing'>
                         <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-lg" />
                         <div className="px-8 py-2  bg-black rounded-[6px]  relative group transition duration-200 text-white hover:bg-transparent">
-                            Lit up borders
+                            Suscribe now
                         </div>
+                        </a>
                     </button>
                     </div>}
                 className='w-full'

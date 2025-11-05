@@ -78,7 +78,7 @@ export const FloatingNav = ({
               key={`link=${idx}`}
               href={navItem.link}
               className={cn(
-                "relative z-10 px-4 py-2 rounded-2xl transition-colors duration-300 hover:bg-gray-600 ",
+                "relative z-10 px-2 py-2 rounded-2xl transition-colors duration-300 hover:bg-gray-600 ",
                 isActive
                   ? "text-black"
                   : "text-white"

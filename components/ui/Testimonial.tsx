@@ -3,7 +3,7 @@ import { InfiniteMovingCards } from './infinite-moving-cards'
 import { BackgroundRippleEffect } from './background-ripple-effect';
 
 
-const Testimonial = () => {
+const   Testimonial = () => {
     const itemTestimonial = [
   {
     quote: "The quality of the models really surprised me, they look amazing in my renders.",
@@ -32,7 +32,6 @@ const Testimonial = () => {
   },
 ];
     return (
-      
     <div className='relative h-screen flex flex-col justify-center items-center overflow-hidden'>
        <BackgroundRippleEffect rows={32} cols={48}/>
         <div className='relative flex w-full h-auto flex-col items-center justify-center px-4 bg-gradient-to-b from-black/80 via-black/20 to-transparent'>
@@ -41,6 +40,7 @@ const Testimonial = () => {
                 <span className='text-gray-400 lg:text-lg text-base text-pretty my-2 text-center'>From architects to game developers, our community shares how these 3D models helped them unlock new possibilities and bring projects to life.</span>
                 <div className='w-7xl overflow-hidden'> 
                     <InfiniteMovingCards
+                    className=''
                     direction="right"
                     speed="normal"
                     items={itemTestimonial}

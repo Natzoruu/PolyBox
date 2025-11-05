@@ -11,19 +11,19 @@ import Footer from "@/components/ui/Footer";
 
 export default function Home() { 
   return (
-    <div className="h-screen w-full lg:overflow-y-scroll lg:snap-y lg:snap-mandatory">
+    <div className="h-screen w-full 2xl:overflow-y-scroll 2xl:snap-y 2xl:snap-mandatory">
       <Navbar/>
       <section className="h-screen snap-start" id="Home">
-        <AuroraBackground>
+        <AuroraBackground >
           <Hero/>
         </AuroraBackground>
       </section>
-      <section className="min-h-screen lg:snap-start lg:scroll-container" id="Perkcards"><Perkcards/></section>
-      <section className="min-h-screen lg:snap-start lg:scroll-container" id="Categories"><Categories/></section>
-      <section className="min-h-screen lg:snap-start lg:scroll-container" id="Showcase"><Showcase/></section>
+      <section className="min-h-screen 2xl:snap-start 2xl:scroll-container" id="Perkcards"><Perkcards/></section>
+      <section className="min-h-screen 2xl:snap-start 2xl:scroll-container" id="Categories"><Categories/></section>
+      <section className="min-h-screen 2xl:snap-start 2xl:scroll-container" id="Showcase"><Showcase/></section>
       <section className="min-h-screen lg:snap-start lg:scroll-container" id="Testimonial"><Testimonial/></section>
       <section className="min-h-screen lg:snap-start lg:scroll-container" id="Cta"><Cta/></section>
-      <section className="min-h-screen lg:snap-start lg:scroll-container" id="Pricing"><Pricing/></section>
+      <section className="min-h-screen lg:snap-start lg:scroll-container" id="Pricing"><Pricing/></section> 
       <section className="lg:snap-end"><Footer/></section>
     </div>
   );

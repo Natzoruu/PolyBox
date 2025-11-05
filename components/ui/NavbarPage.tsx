@@ -1,36 +1,43 @@
 "use client"
 import React, { useEffect, useState } from 'react'
-import { Home } from 'lucide-react'
+import { Home , Gift , Folder , Image as ImageIcon , User , Bell , CreditCard } from 'lucide-react'
 import { FloatingNav } from '@/components/ui/floating-navbar'
-import { threshold } from 'three/src/nodes/TSL.js';
 
 
 const NavbarPage = () => {
   const [activeSection, setActiveSection] = useState<string>("");
   const navItems = [
     {name : "Home", icon : <Home/> , link : "#Home"},
-    {name : "Perks", icon : <Home/> , link : "#Perkcards"},
-    {name : "Categories", icon : <Home/> , link : "#Categories"},
-    {name : "Showcase", icon : <Home/> , link : "#Showcase"},
-    {name : "Testimonials", icon : <Home/> , link : "#Testimonial"},
-    {name : "Cta", icon : <Home/> , link : "#Cta"},
-    {name : "Pricing", icon : <Home/> , link : "#Pricing"},
+    {name : "Perks", icon : <Gift/> , link : "#Perkcards"},
+    {name : "Categories", icon : <Folder/> , link : "#Categories"},
+    {name : "Showcase", icon : <ImageIcon/> , link : "#Showcase"},
+    {name : "Testimonials", icon : <User/> , link : "#Testimonial"},
+    {name : "Cta", icon : <Bell/> , link : "#Cta"},
+    {name : "Pricing", icon : <CreditCard/> , link : "#Pricing"},
   ]
-  useEffect (()=> {
-    const section = document.querySelectorAll("section[id]");
-    const observer = new IntersectionObserver(
-      (entries) =>{
-        entries.forEach((entry)=> {
-        if (entry.isIntersecting){
-          setActiveSection(entry.target.id)
-          }
+  useEffect(() => {
+  const sections = Array.from(document.querySelectorAll("section[id]"));
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveSection(entry.target.id);
         }
-        )
-      },
-      {threshold:0.5}
-    );
-    section.forEach((section) => observer.observe(section))
-  })
+      });
+    },
+    {
+      root: null,
+      threshold: 0,
+      // Banda de activación centrada: entra cuando ~la cabecera de la sección cruza el 30% del viewport
+      rootMargin: "-30% 0px -60% 0px",
+    }
+  );
+
+  sections.forEach((el) => observer.observe(el));
+  return () => observer.disconnect();
+}, []);
+
 
   return (
     <>
