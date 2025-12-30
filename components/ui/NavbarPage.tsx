@@ -29,7 +29,6 @@ const NavbarPage = () => {
     {
       root: null,
       threshold: 0,
-      // Banda de activación centrada: entra cuando ~la cabecera de la sección cruza el 30% del viewport
       rootMargin: "-30% 0px -60% 0px",
     }
   );

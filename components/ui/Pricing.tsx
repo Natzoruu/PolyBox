@@ -67,28 +67,6 @@ const Pricing = () => {
     ]
   return (
     <div className="relative w-full h-auto min-h-screen overflow-hidden">
-        <div className="absolute inset-0 z-0">
-            <PixelBlast
-            className=''
-            variant="circle"
-            pixelSize={10}
-            color="#9810fa"
-            patternScale={2}
-            patternDensity={0.8}
-            pixelSizeJitter={0.5}
-            enableRipples
-            rippleSpeed={0.4}
-            rippleThickness={0.12}
-            rippleIntensityScale={1.5}
-            liquid
-            liquidStrength={0.12}
-            liquidRadius={1.2}
-            liquidWobbleSpeed={5}
-            speed={0.6}
-            edgeFade={0.1}
-            transparent={true}
-            />
-        </div>
         <div className='2xl:h-screen h-auto relative z-10 flex flex-col justify-center items-center lg:pt-10 p-6 top-10 -translate-x-1/2 left-1/2'>
             <div className='w-full flex flex-col justify-center items-center gap-4 px-4'>
                 <h1 className='text-white font-bold lg:text-7xl text-3xl text-center'>Choose the Right Plan for Your 3D Journey</h1>

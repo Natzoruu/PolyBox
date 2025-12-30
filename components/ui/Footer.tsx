@@ -1,20 +1,21 @@
+"use client"
 import React from 'react'
 import {Heart} from 'lucide-react'
 
 const Footer = () => {
     const QuickNavMenu = [
-        {menu : "Home", url : "#Home"},
-        {menu : "Perks", url : "#Perkcards"},
-        {menu : "Categories", url : "#Categories"},
-        {menu : "Showcase", url : "#Showcase"},
-        {menu : "Testimonial", url : "#Testimonial"},
-        {menu : "Cta", url : "#Cta"},
-        {menu : "Pricing", url : "#Pricing"},
+        {menu : "Home", url : "Home"},
+        {menu : "Perks", url : "Perkcards"},
+        {menu : "Categories", url : "Categories"},
+        {menu : "Showcase", url : "Showcase"},
+        {menu : "Testimonial", url : "Testimonial"},
+        {menu : "Cta", url : "Cta"},
+        {menu : "Pricing", url : "Pricing"},
     ]
     const FollowUs = [
         {menu : "Instagram", url : "https://www.instagram.com"},
         {menu : "X (Twitter)", url : "https://x.com"},
-        {menu : "YouTube", url : "www.youtube.com"},
+        {menu : "YouTube", url : "https://youtube.com"},
         {menu : "Discord", url : "https://discord.com"},
     ]
   return (
@@ -28,17 +29,17 @@ const Footer = () => {
                 <div className='grid grid-cols-2 gap-y-2 gap-x-8 px-18 py-2 justify-start items-start '>
                     <h1 className='lg:text-3xl text-2xl font-bold col-span-full'>Quick Navigation</h1>
                     {QuickNavMenu.map((item, index)=>(  
-                        <a 
+                        <button 
                             key={index} 
-                            className='text-pretty lg:text-lg text-base text-gray-400' 
-                            href={item.url}>{item.menu}
-                        </a>
+                            className='text-pretty lg:text-lg text-base text-left cursor-pointer text-gray-400 hover:text-white transition-all duration-300 ease-in-out' 
+                            onClick={()=>{document.getElementById(item.url)?.scrollIntoView({ behavior: "smooth" })}}>{item.menu}
+                        </button>
                     ))}
                 </div>
                 <div className='flex flex-col gap-y-2 px-18 py-2 justify-start items-start '>
                     <h1 className='lg:text-3xl text-2xl font-bold'>Follow Us</h1>
                     {FollowUs.map((item,index)=>(
-                        <a key={index} href={item.url} className='text-pretty lg:text-lg text-gray-400 text-base'>{item.menu}</a>
+                        <a key={index} href={item.url} target="_blank" className='text-pretty lg:text-lg text-gray-400 text-base'>{item.menu}</a>
                     ))}
                 </div>
             </div>

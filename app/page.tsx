@@ -1,4 +1,3 @@
-import {AuroraBackground} from "@/components/ui/aurora-background"
 import Categories from "@/components/ui/Categories";
 import Hero from "@/components/ui/Hero"
 import Navbar from "@/components/ui/NavbarPage"
@@ -11,19 +10,15 @@ import Footer from "@/components/ui/Footer";
 
 export default function Home() { 
   return (
-    <div className="h-screen w-full 2xl:overflow-y-scroll 2xl:snap-y 2xl:snap-mandatory">
+    <div className="h-screen w-full">
       <Navbar/>
-      <section className="h-screen snap-start" id="Home">
-        <AuroraBackground >
-          <Hero/>
-        </AuroraBackground>
-      </section>
-      <section className="min-h-screen 2xl:snap-start 2xl:scroll-container" id="Perkcards"><Perkcards/></section>
-      <section className="min-h-screen 2xl:snap-start 2xl:scroll-container" id="Categories"><Categories/></section>
-      <section className="min-h-screen 2xl:snap-start 2xl:scroll-container" id="Showcase"><Showcase/></section>
-      <section className="min-h-screen lg:snap-start lg:scroll-container" id="Testimonial"><Testimonial/></section>
-      <section className="min-h-screen lg:snap-start lg:scroll-container" id="Cta"><Cta/></section>
-      <section className="min-h-screen lg:snap-start lg:scroll-container" id="Pricing"><Pricing/></section> 
+      <section className="min-h-screen" id="Home"><Hero/></section>
+      <section className="min-h-screen" id="Perkcards"><Perkcards/></section>
+      <section className="min-h-screen" id="Categories"><Categories/></section>
+      <section className="min-h-screen" id="Showcase"><Showcase/></section>
+      <section className="min-h-screen" id="Testimonial"><Testimonial/></section>
+      <section className="min-h-screen" id="Cta"><Cta/></section>
+      <section className="min-h-screen" id="Pricing"><Pricing/></section>
       <section className="lg:snap-end"><Footer/></section>
     </div>
   );

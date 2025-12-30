@@ -20,21 +20,7 @@ function Island(){
 const Showcase = () => {
 
   return (
-    <div className="relative isolate min-h-svh sm:min-h-dvh 2xl:min-h-screen sm:py-4">
-  {/* Overlay debajo y sin capturar eventos */}
-  <div className="absolute inset-0 hidden sm:block z-0 pointer-events-none">
-    <DarkVeil
-      hueShift={10}
-      noiseIntensity={0}
-      scanlineFrequency={10}
-      speed={3}
-      scanlineIntensity={0}
-      warpAmount={0}
-      resolutionScale={1}
-    />
-  </div>
-
-  {/* Contenido por encima del overlay */}
+  <div className="relative isolate min-h-svh sm:min-h-dvh 2xl:min-h-screen sm:py-4">
   <div className="relative z-10 2xl:w-full 2xl:h-screen flex flex-col justify-center items-center sm:px-8 sm:gap-y-5 2xl:gap-y-8 px-4 2xl:absolute 2xl:left-1/2 2xl:top-1/2 2xl:-translate-x-1/2 2xl:-translate-y-1/2">
     <div className="flex flex-col text-center gap-y-3 my-4">
       {/* Tipografía fluida con clamp para desktop */}

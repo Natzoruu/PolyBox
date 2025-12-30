@@ -1,8 +1,6 @@
 "use client"
 import React, { useState } from 'react'
-import  LightRays from "@/components/LightRays"
 import {Card} from "@/components/ui/focus-cards"
-
 
 const Categories = () => {
   const categories = [
@@ -16,20 +14,6 @@ const Categories = () => {
   const [hovered , setHovered] = useState <number | null>(null);
   return (
     <div className="relative h-auto min-h-screen 2xl:h-screen overflow-hidden">
-      <div className="absolute inset-0 -z-10 pointer-events-none">
-        <LightRays
-          raysOrigin="top-center"
-          raysColor=""
-          raysSpeed={2.5}
-          lightSpread={1.5}
-          rayLength={2}
-          followMouse={true}
-          mouseInfluence={0.3}
-          noiseAmount={0.25}
-          distortion={0.2}
-          className="w-full h-full hidden sm:hidden md:hidden lg:block xl:block 2xl:block"
-        />
-      </div>
       <div className="relative z-10 flex flex-col justify-center items-center min-h-screen px-4 text-white text-center my-10">
         <div className="max-w-6xl flex flex-col gap-y-6">
           <h1 className="text-3xl sm:text-4xl lg:text-7xl font-bold">

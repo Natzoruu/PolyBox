@@ -30,7 +30,6 @@ const Perkcards = () => {
               <h1 className='lg:w-full w-2/3 text-left font-bold text-3xl'>Unlimited Creativity</h1>
               <p className='lg:w-full w-2/3 text-left text-base'>Access a vast library of unique 3D models for any project.</p>
 
-              {/* Imagen optimizada */}
               <div className="fixed sm:right-0 sm:top-5 -right-10 top-20 lg:right-15 lg:top-3 w-50 h-50 -z-10">
                 <div className="relative w-full h-full">
                   <Image
@@ -52,8 +51,6 @@ const Perkcards = () => {
             <WobbleCard containerClassName='lg:col-span-3 bg-blue-700 relative'>
               <h1 className='lg:w-full w-2/3 text-left font-bold text-3xl'>Fast & Easy Access</h1>
               <p className='lg:w-full w-2/3 text-left text-base'>Download instantly and bring your ideas to life.</p>
-
-              {/* Imagen optimizada */}
               <div className="fixed sm:-right-40 sm:top-0 md:-top-15 -right-15 -bottom-10 lg:-right-10 lg:-top-17 w-[400px] h-[300px] -z-10">
                 <div className="relative w-full h-full">
                   <Image

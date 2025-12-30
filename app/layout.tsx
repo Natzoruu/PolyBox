@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
-import {  Open_Sans } from "next/font/google";
+import { Open_Sans } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "next-themes"
 import { Toaster } from "@/components/ui/sonner"
+// import { AuroraBackground } from "@/components/ui/aurora-background"; // Parece que no lo usas ahora
+import DarkVeil from "@/components/DarkVeil";
 
 const OpenSans = Open_Sans({
   variable: "--font-Open_Sans",
@@ -20,12 +22,23 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="dark" style={{ colorScheme: "dark" }}  >
-      <body
-        className={`${OpenSans.variable} antialiased`}
-      >
+    <html lang="en" className="dark" style={{ colorScheme: "dark" }}>
+      <body className={`${OpenSans.variable} antialiased`}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-          {children}
+          <div className="fixed inset-0 -z-10 h-full w-full pointer-events-none">
+            <DarkVeil
+              hueShift={10}
+              noiseIntensity={0}
+              scanlineFrequency={10}
+              speed={3}
+              scanlineIntensity={0}
+              warpAmount={0}
+              resolutionScale={1}
+            />
+          </div>
+          <main className="relative z-0">
+            {children}
+          </main>
           <Toaster position="top-center" />
         </ThemeProvider>
       </body>
